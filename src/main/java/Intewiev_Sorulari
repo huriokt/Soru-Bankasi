@@ -1,0 +1,69 @@
+S2: Java neden %100 nesne yönelimli değil?
+Java %100 Nesne Yönelimli Bir Programlama Dili Midir?
+Kısa cevap: Hayır.
+
+Daha uzun cevap:
+
+Java ve C# nesne yönelimli programlama dilleridir ama %100 nesne yönelimli değillerdir. Bir programlama dilinin
+%100 nesne yönelimli olması için sağlaması gereken bir kurallar kümesi var(mış). Bunları şu şekilde listeleyebiliriz:
+
+Encapsulation / Data hiding -> Kapsülleme, sarmalama, paketleme / Veri gizleme
+Inheritance -> Kalıtım, miras
+Polymorphism -> Çok çeşitlilik
+Abstraction -> Soyutlama
+Tüm öntanımlı tiplerin nesne olması
+Tüm kullanıcı tanımlı tiplerin nesne olması
+Tüm işlemlerin nesnelere mesaj gönderilerek gerçekleştirilmesi
+Java’da Boolean, Integer gibi nesne tiplerinin yanında, nesne olmayan boolean, char, short, int, long, float, double
+ gibi primitive tipler bulunmaktadır. C#’ta bu tipler de nesne olmasına rağmen bünyesinde bulundurduğu struct’dan
+ dolayı C# da %100 nesne yönelimli olma kategorisine dahil olamıyor.
+
+Peki hangi programlama dilleri %100 nesne yönelimlidir? Öyle bir dil var mıdır?
+Eiffel, Smalltalk ve Ruby bu dillere örnek olarak verilebilir.
+
+s10: Java’da Heap ve Stack Memory arasındaki farklar nelerdir?
+Stack ve heap kullanımları farklı ve dikkat edilmesi gereken bir konudur. Stack kullanılır ve işi bittikten sonra
+ kendini otomatik olarak bellekten yok eder.Fakat heap‘te bu işi siz yapmalısınız. (Çünkü C’de Garbage Collector yok,
+  ne olduğuna konunun özünü kaçırmamak için girmiyorum.)
+
+
+S18: Java da obje (Object) nedir ve nasıl oluşturulur?
+
+Cevap :Nesne (object) onun somutlaşan bir cismidir. Java'da sınıf (class) kavramını doğada cins isimlere benzetebiliriz.
+ Bir cins kendi başına belirli bir nesne değildir ; ancak belirli türden nesnelerin ortak özelliklerini
+ belirten soyut bir kavramdır.
+
+ S34: Kaç tane ClassLoader vardır ve nelerdir?
+ Java uygulamalarımız JVM üzerinde çalışmaktadır. JVM yazılımları çalıştırırken gereken sınıfları kendisine yükler. Bu işlemi yapan ClassLoader yapar.
+
+ Programımızdaki sınıflara göre dinamik olarak yükleme işlemi yapar. java.lang.ClassLoader sınıfının getClassLoader metotudu bulunmaktadır.
+
+ Java’da 3 farklı ClassLoader vardır.
+
+ Cevap:Bootstrap Class Loader
+ Base sınıf dosyalarını yüklemesinden sorumludur.
+
+ Extension Class Loader
+ Ek sınıf dosyalarının yüklenmesinden sorumludur.
+
+ Application class Loader
+ Uygulamamız çalışması gereken sınıf dosyalarını yüklemekten sorumludur.
+
+ İmplement ederek kendi Custom Loaderimizi yazmamız mümkündür.
+
+ Exception Handling ederek oluşabilecek sorunları yakalayabiliriz.
+
+ NoClassDefFoundError
+ ClassNotFoundException
+ bu hataları yakalayarsak ClassLoader’dan oluşacak sorunlaru Runtime’da programı durdurmaz.
+S.42 Java’da Abstraction (soyutlama) nedir?
+Cevap:Java’da sınıflar veya metodlar abstract (soyut) olarak tanımlanabilir.
+      Peki biz niye buna ihtiyaç duyarız?
+      Bazen biz sınıf yazarken o sınıfın işi nasıl yaptığı ile ilgilenmeyiz ne iş yaptığı ile ilgileniriz.
+      Örneğin cep telefonundan mesaj yazıp gönderdiğimizde telefonun içinde dönen işlemden çok mesajın ulaşıp
+      ulaşmadığı bizi alakadar eder. Mesajın gönderilip yerine ulaşması sürecinde geçen olaylar bizi ilgilendirmez.
+      Aynen bu örnekte olduğu gibi biz bazen soyut sınıflar veya soyut metodlar yazmak isteyebiliriz, bu sınıfın
+      veya içindeki metodun ne yaptığından çok ne iş yaptığı ile ilgileniriz bu yüzden de soyut sınıflar yazarız.
+      Soyut sınıflar abstract veya interface olarak adlandırılabilirler.
+      Abstract olarak tanımlanan sınıf içerisinde abstract metodlar olabileceği gibi, abstract yani soyut
+      olmayan sınıflar da olabilir.
